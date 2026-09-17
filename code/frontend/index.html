@@ -1,0 +1,1389 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Buy or Wait — AI Financial Decision Agent</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- =========================================================
+     AUTHENTICATION
+========================================================= -->
+
+<div id="authShell" class="auth-shell">
+
+    <!-- LEFT HERO -->
+
+    <div class="auth-art">
+
+        <div class="art-grid"></div>
+
+        <span class="art-orbit orbit-one"></span>
+        <span class="art-orbit orbit-two"></span>
+
+        <div class="art-content">
+
+            <div class="hero-badge">
+                <span></span>
+                AI FINANCIAL DECISION AGENT
+            </div>
+
+            <p class="eyebrow">
+                BUY OR WAIT / 2026
+            </p>
+
+            <h1>
+                Make smarter
+                <br>
+                <em>money decisions.</em>
+            </h1>
+
+            <p class="hero-description">
+                Forecast-aware financial guidance that looks beyond
+                your current balance before recommending your next purchase.
+            </p>
+
+            <div class="hero-features">
+
+                <div>
+                    <strong>90D</strong>
+                    <span>Cash-flow forecast</span>
+                </div>
+
+                <div>
+                    <strong>24/7</strong>
+                    <span>Decision engine</span>
+                </div>
+
+                <div>
+                    <strong>100%</strong>
+                    <span>Local processing</span>
+                </div>
+
+            </div>
+
+            <div class="demo-note">
+                <span class="status-dot"></span>
+                Secure session · No bank connection · No real transactions
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- =====================================================
+         LOGIN
+    ====================================================== -->
+
+    <section class="auth-card" id="loginStep">
+
+        <div class="auth-logo">
+            ↗
+        </div>
+
+        <p class="eyebrow">
+            SECURE ACCESS
+        </p>
+
+        <h2>
+            Welcome back.
+        </h2>
+
+        <p class="auth-intro">
+            Start your financial decision session with your
+            contact information.
+        </p>
+
+        <div class="security-note">
+
+            <span>◆</span>
+
+            <div>
+                <strong>Private session</strong>
+                <small>
+                    No banking credentials are requested.
+                </small>
+            </div>
+
+        </div>
+
+        <label>
+            Mobile number or email
+
+            <input
+                id="loginContact"
+                type="text"
+                placeholder="you@example.com"
+                autocomplete="email"
+            >
+        </label>
+
+        <button
+            class="primary-button"
+            id="sendOtpButton"
+            type="button"
+        >
+            Continue
+            <span>→</span>
+        </button>
+
+        <p class="auth-foot">
+            No real SMS or email is sent. Your session stays
+            inside this browser.
+        </p>
+
+    </section>
+
+
+    <!-- =====================================================
+         OTP
+    ====================================================== -->
+
+    <section class="auth-card hidden" id="otpStep">
+
+        <div class="auth-logo">
+            ✦
+        </div>
+
+        <p class="eyebrow">
+            STEP 2 / VERIFY
+        </p>
+
+        <h2>
+            Confirm your session.
+        </h2>
+
+        <p class="auth-intro">
+            Enter the verification code to continue.
+        </p>
+
+        <div class="demo-code">
+
+            <span>123456</span>
+
+            <small>
+                VERIFICATION CODE
+            </small>
+
+        </div>
+
+        <label>
+            6-digit verification code
+
+            <input
+                id="otpInput"
+                inputmode="numeric"
+                maxlength="6"
+                placeholder="123456"
+            >
+        </label>
+
+        <button
+            class="primary-button"
+            id="verifyOtpButton"
+            type="button"
+        >
+            Verify and continue
+            <span>→</span>
+        </button>
+
+        <button
+            class="text-button"
+            id="backToLogin"
+            type="button"
+        >
+            ← Back to contact
+        </button>
+
+    </section>
+
+
+    <!-- =====================================================
+         FINANCIAL PROFILE
+    ====================================================== -->
+
+    <section
+        class="auth-card wide hidden"
+        id="onboardingStep"
+    >
+
+        <!-- HEADER -->
+
+        <div class="onboarding-header">
+
+            <div>
+
+                <p class="eyebrow">
+                    BUILD YOUR PROFILE
+                </p>
+
+                <h2>
+                    Tell us about your finances.
+                </h2>
+
+                <p class="auth-intro">
+                    Give the financial agent the information it needs
+                    to understand your income, expenses, commitments
+                    and financial safety.
+                </p>
+
+            </div>
+
+            <div class="profile-status">
+                <span></span>
+                Personal profile
+            </div>
+
+        </div>
+
+
+        <!-- =================================================
+             SECTION 01 — INCOME
+        ================================================== -->
+
+        <div class="profile-section">
+
+            <div class="profile-section-heading">
+
+                <span class="profile-section-icon">
+                    ₹
+                </span>
+
+                <div>
+
+                    <p class="eyebrow">
+                        01 / INCOME
+                    </p>
+
+                    <h3>
+                        Your income
+                    </h3>
+
+                    <p>
+                        Help the agent understand how money enters
+                        your account and what you currently have available.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="profile-form">
+
+                <label>
+                    Monthly income
+
+                    <input
+                        value="85,000"
+                        data-profile-field
+                    >
+                </label>
+
+
+                <label>
+                    Other regular income
+
+                    <input
+                        value="0"
+                        data-profile-field
+                    >
+                </label>
+
+
+                <label>
+                    Income frequency
+
+                    <select data-profile-field>
+
+                        <option>
+                            Monthly
+                        </option>
+
+                        <option>
+                            Weekly
+                        </option>
+
+                        <option>
+                            Irregular
+                        </option>
+
+                    </select>
+
+                </label>
+
+
+                <label>
+                    Next expected income date
+
+                    <input
+                        type="date"
+                        value="2024-06-15"
+                        data-profile-field
+                    >
+                </label>
+
+
+                <label class="full-width-field">
+
+                    Current balance / savings
+
+                    <input
+                        value="68,363.53"
+                        data-profile-field
+                    >
+
+                </label>
+
+            </div>
+
+        </div>
+
+
+        <!-- =================================================
+             SECTION 02 — HOME & COMMITMENTS
+        ================================================== -->
+
+        <div class="profile-section">
+
+            <div class="profile-section-heading">
+
+                <span class="profile-section-icon">
+                    ⌂
+                </span>
+
+                <div>
+
+                    <p class="eyebrow">
+                        02 / HOME & COMMITMENTS
+                    </p>
+
+                    <h3>
+                        Your regular expenses
+                    </h3>
+
+                    <p>
+                        Tell the agent about housing and recurring
+                        commitments that affect your monthly cash flow.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="profile-form">
+
+                <label>
+
+                    Housing
+
+                    <select
+                        id="housingSelect"
+                        data-profile-field
+                    >
+
+                        <option>
+                            Rent
+                        </option>
+
+                        <option>
+                            Own Home
+                        </option>
+
+                        <option>
+                            Living with Family
+                        </option>
+
+                    </select>
+
+                </label>
+
+
+                <label id="rentField">
+
+                    Monthly rent
+
+                    <input
+                        value="22,000"
+                        data-profile-field
+                    >
+
+                </label>
+
+
+                <label
+                    id="homeExpenseField"
+                    class="hidden"
+                >
+
+                    Home EMI
+
+                    <input
+                        value="10,000"
+                        data-profile-field
+                    >
+
+                </label>
+
+
+                <label
+                    id="maintenanceField"
+                    class="hidden"
+                >
+
+                    Maintenance
+
+                    <input
+                        value="3,000"
+                        data-profile-field
+                    >
+
+                </label>
+
+
+                <label
+                    id="familyContributionField"
+                    class="hidden"
+                >
+
+                    Household contribution
+
+                    <input
+                        value="8,000"
+                        data-profile-field
+                    >
+
+                </label>
+
+
+                <label>
+
+                    Monthly essential expenses
+
+                    <input
+                        value="28,000"
+                        data-profile-field
+                    >
+
+                </label>
+
+
+                <label>
+
+                    Utilities
+
+                    <input
+                        value="4,500"
+                        data-profile-field
+                    >
+
+                </label>
+
+
+                <label>
+
+                    Loan / EMI
+
+                    <input
+                        value="0"
+                        data-profile-field
+                    >
+
+                </label>
+
+            </div>
+
+        </div>
+
+
+        <!-- =================================================
+             SECTION 03 — FINANCIAL SAFETY
+        ================================================== -->
+
+        <div class="profile-section">
+
+            <div class="profile-section-heading">
+
+                <span class="profile-section-icon">
+                    ◈
+                </span>
+
+                <div>
+
+                    <p class="eyebrow">
+                        03 / FINANCIAL SAFETY
+                    </p>
+
+                    <h3>
+                        Set your safety limits
+                    </h3>
+
+                    <p>
+                        These limits help the agent protect your
+                        emergency reserve while evaluating purchases.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="profile-form">
+
+                <label>
+
+                    Minimum emergency reserve
+
+                    <input
+                        value="32,500"
+                        data-profile-field
+                    >
+
+                </label>
+
+
+                <label>
+
+                    Maximum comfortable EMI
+
+                    <input
+                        value="15,000"
+                        data-profile-field
+                    >
+
+                </label>
+
+
+                <label>
+
+                    Preferred payment method
+
+                    <select data-profile-field>
+
+                        <option>
+                            Installments preferred
+                        </option>
+
+                        <option>
+                            Full payment
+                        </option>
+
+                        <option>
+                            Partial payment
+                        </option>
+
+                    </select>
+
+                </label>
+
+
+                <label>
+
+                    Financial priority
+
+                    <select data-profile-field>
+
+                        <option>
+                            Emergency savings
+                        </option>
+
+                        <option>
+                            Debt repayment
+                        </option>
+
+                        <option>
+                            Education
+                        </option>
+
+                        <option>
+                            Travel
+                        </option>
+
+                    </select>
+
+                </label>
+
+            </div>
+
+        </div>
+
+
+        <!-- =================================================
+             PROFILE COMPLETE
+        ================================================== -->
+
+        <div class="profile-complete">
+
+            <div class="profile-complete-info">
+
+                <span class="complete-icon">
+                    ✓
+                </span>
+
+                <div>
+
+                    <strong>
+                        Your financial profile is ready
+                    </strong>
+
+                    <p>
+                        The agent will use these details to evaluate
+                        your future cash flow and purchase safety.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <button
+                class="primary-button"
+                id="finishOnboarding"
+                type="button"
+            >
+
+                Open My Dashboard
+
+                <span>
+                    →
+                </span>
+
+            </button>
+
+        </div>
+
+    </section>
+
+</div>
+
+
+
+<!-- =========================================================
+     MAIN APPLICATION
+========================================================= -->
+
+<div
+    id="appShell"
+    class="app-shell hidden"
+>
+
+
+    <!-- =====================================================
+         SIDEBAR
+    ====================================================== -->
+
+    <aside class="sidebar">
+
+
+        <!-- BRAND -->
+
+        <div class="brand">
+
+            <div class="brand-mark">
+                ↗
+            </div>
+
+            <div>
+
+                <strong>
+                    Buy or Wait
+                </strong>
+
+                <small>
+                    Financial decision agent
+                </small>
+
+            </div>
+
+        </div>
+
+
+        <div class="sidebar-label">
+            WORKSPACE
+        </div>
+
+
+        <!-- NAVIGATION -->
+
+        <nav>
+
+            <button
+                class="nav-item active"
+                type="button"
+            >
+
+                <span class="nav-icon">
+                    ⌂
+                </span>
+
+                <span>
+                    Dashboard
+                </span>
+
+            </button>
+
+
+            <button
+                class="nav-item"
+                type="button"
+            >
+
+                <span class="nav-icon">
+                    ◷
+                </span>
+
+                <span>
+                    Transactions
+                </span>
+
+            </button>
+
+
+            <button
+                class="nav-item"
+                type="button"
+            >
+
+                <span class="nav-icon">
+                    ◫
+                </span>
+
+                <span>
+                    Financial plan
+                </span>
+
+            </button>
+
+        </nav>
+
+
+        <!-- AGENT STATUS -->
+
+        <div class="sidebar-agent">
+
+            <div class="agent-pulse">
+                <span></span>
+            </div>
+
+            <div>
+
+                <strong>
+                    Agent online
+                </strong>
+
+                <small>
+                    Financial data synced
+                </small>
+
+            </div>
+
+        </div>
+
+
+        <!-- SIDEBAR USER -->
+
+        <div class="sidebar-bottom">
+
+            <div class="sidebar-user">
+
+                <div class="mini-avatar">
+                    AZ
+                </div>
+
+                <div>
+
+                    <strong>
+                        Abhimanyu
+                    </strong>
+
+                    <small>
+                        Personal profile
+                    </small>
+
+                </div>
+
+            </div>
+
+
+            <button
+                class="logout-button"
+                id="logoutButton"
+                type="button"
+            >
+                Log out
+            </button>
+
+        </div>
+
+    </aside>
+
+
+
+    <!-- =====================================================
+         MAIN CONTENT
+    ====================================================== -->
+
+    <main class="main">
+
+
+        <!-- TOP BAR -->
+
+        <header class="topbar">
+
+            <div class="topbar-heading">
+
+                <div class="breadcrumb">
+
+                    PERSONAL FINANCE
+                    <span>/</span>
+                    PERSONAL PROFILE
+
+                </div>
+
+                <h1>
+                    Your money, before your purchase.
+                </h1>
+
+                <p class="muted">
+                    Make smarter purchase decisions using your
+                    complete financial forecast.
+                </p>
+
+            </div>
+
+
+            <div class="user-chip">
+
+                <span>
+                    AZ
+                </span>
+
+                <div>
+
+                    <strong>
+                        Abhimanyu
+                    </strong>
+
+                    <small>
+
+                        Personal profile ·
+                        <span id="profileCurrency">
+                            —
+                        </span>
+
+                    </small>
+
+                </div>
+
+
+                <button
+                    class="logout-button"
+                    id="headerLogoutButton"
+                    type="button"
+                >
+                    Log out
+                </button>
+
+            </div>
+
+        </header>
+
+
+
+        <!-- =================================================
+             FINANCIAL OVERVIEW
+        ================================================== -->
+
+        <section class="stats-grid">
+
+
+            <article class="stat-card accent">
+
+                <div class="stat-top">
+
+                    <span>
+                        Available balance
+                    </span>
+
+                    <span class="stat-icon">
+                        ₹
+                    </span>
+
+                </div>
+
+                <strong id="overviewBalance">
+                    —
+                </strong>
+
+                <small>
+                    Current usable funds
+                </small>
+
+            </article>
+
+
+
+            <article class="stat-card">
+
+                <div class="stat-top">
+
+                    <span>
+                        Safe to spend
+                    </span>
+
+                    <span class="stat-icon">
+                        ✓
+                    </span>
+
+                </div>
+
+                <strong id="overviewSafe">
+                    —
+                </strong>
+
+                <small>
+                    After protected reserve
+                </small>
+
+            </article>
+
+
+
+            <article class="stat-card">
+
+                <div class="stat-top">
+
+                    <span>
+                        Upcoming commitments
+                    </span>
+
+                    <span class="stat-icon">
+                        ◷
+                    </span>
+
+                </div>
+
+                <strong id="overviewExpenses">
+                    —
+                </strong>
+
+                <small>
+                    Essential expenses · 30 days
+                </small>
+
+            </article>
+
+
+
+            <article class="stat-card health-card">
+
+                <div class="stat-top">
+
+                    <span>
+                        Financial health
+                    </span>
+
+                    <span class="health-indicator">
+                        ●
+                    </span>
+
+                </div>
+
+                <strong id="overviewHealth">
+                    Ready
+                </strong>
+
+                <small>
+                    Forecast protection active
+                </small>
+
+            </article>
+
+        </section>
+
+
+
+        <!-- =================================================
+             AI FINANCIAL AGENT
+        ================================================== -->
+
+        <section class="request-panel">
+
+
+            <div class="panel-heading">
+
+                <div>
+
+                    <div class="section-kicker">
+
+                        <span class="live-dot"></span>
+
+                        AUTONOMOUS FINANCIAL AGENT
+
+                    </div>
+
+                    <h2>
+                        Should you buy it?
+                    </h2>
+
+                </div>
+
+
+                <span class="live-pill">
+
+                    <i></i>
+
+                    LOCAL ENGINE
+
+                </span>
+
+            </div>
+
+
+            <p class="muted panel-copy">
+
+                Tell the agent what you want to buy.
+                It will forecast your cash flow, protect your reserve,
+                check upcoming commitments and recommend the safest option.
+
+            </p>
+
+
+            <div class="request-input-wrap">
+
+                <span class="input-symbol">
+                    ₹
+                </span>
+
+                <textarea
+                    id="requestInput"
+                    placeholder="e.g. Can I afford a laptop for ₹50,000?"
+                ></textarea>
+
+            </div>
+
+
+            <div class="request-footer">
+
+
+                <div class="examples-label">
+                    TRY AN EXAMPLE
+                </div>
+
+
+                <div class="examples">
+
+                    <button
+                        type="button"
+                        data-example="Can I afford a laptop for ₹50,000?"
+                    >
+                        💻 Laptop
+                    </button>
+
+
+                    <button
+                        type="button"
+                        data-example="Can I buy headphones for ₹2,000?"
+                    >
+                        🎧 Headphones
+                    </button>
+
+
+                    <button
+                        type="button"
+                        data-example="Should I wait before buying this phone for ₹75,000?"
+                    >
+                        📱 Phone
+                    </button>
+
+                </div>
+
+
+                <button
+                    class="primary-button agent-button"
+                    id="askFinancialAgent"
+                    type="button"
+                >
+
+                    Ask Financial Agent
+
+                    <span>
+                        →
+                    </span>
+
+                </button>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================================
+             LOADING
+        ================================================== -->
+
+        <section
+            id="loadingSection"
+            class="loading-panel hidden"
+        >
+
+            <div class="loader"></div>
+
+            <div>
+
+                <strong id="loadingTitle">
+                    Analyzing your request
+                </strong>
+
+                <p id="loadingMessage">
+                    Reading your financial profile.
+                </p>
+
+
+                <ul class="analysis-steps">
+
+                    <li class="active">
+                        ◉ Reading financial profile
+                    </li>
+
+                    <li>
+                        ○ Checking upcoming commitments
+                    </li>
+
+                    <li>
+                        ○ Forecasting cash flow
+                    </li>
+
+                    <li>
+                        ○ Comparing payment options
+                    </li>
+
+                    <li>
+                        ○ Finding safest action
+                    </li>
+
+                </ul>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================================
+             RESULT
+        ================================================== -->
+
+        <section
+            id="resultSection"
+            class="hidden"
+        ></section>
+
+
+
+        <!-- =================================================
+             UPCOMING COMMITMENTS
+        ================================================== -->
+
+        <section class="upcoming-section">
+
+            <div class="section-heading">
+
+                <div>
+
+                    <p class="eyebrow">
+                        UPCOMING COMMITMENTS
+                    </p>
+
+                    <h2>
+                        Keep the important things visible
+                    </h2>
+
+                </div>
+
+                <span class="view-label">
+                    NEXT 30 DAYS
+                </span>
+
+            </div>
+
+
+            <div
+                id="upcomingEvents"
+                class="event-list"
+            >
+
+                <div class="empty-state">
+
+                    <span>
+                        ◌
+                    </span>
+
+                    <div>
+
+                        <strong>
+                            Loading commitments
+                        </strong>
+
+                        <p>
+                            Reading your financial forecast.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================================
+             TRANSACTIONS
+        ================================================== -->
+
+        <section
+            id="transactionsView"
+            class="page-view hidden"
+        >
+
+            <div class="section-heading">
+
+                <div>
+
+                    <p class="eyebrow">
+                        TRANSACTIONS
+                    </p>
+
+                    <h2>
+                        Financial activity
+                    </h2>
+
+                </div>
+
+
+                <input
+                    id="transactionSearch"
+                    class="compact-input"
+                    placeholder="Search transactions"
+                >
+
+            </div>
+
+
+            <div class="filter-row">
+
+                <button
+                    class="filter active"
+                    data-filter="all"
+                    type="button"
+                >
+                    All
+                </button>
+
+                <button
+                    class="filter"
+                    data-filter="income"
+                    type="button"
+                >
+                    Income
+                </button>
+
+                <button
+                    class="filter"
+                    data-filter="expense"
+                    type="button"
+                >
+                    Expenses
+                </button>
+
+                <button
+                    class="filter"
+                    data-filter="essential"
+                    type="button"
+                >
+                    Essential
+                </button>
+
+                <button
+                    class="filter"
+                    data-filter="flexible"
+                    type="button"
+                >
+                    Flexible
+                </button>
+
+            </div>
+
+
+            <div
+                id="transactionTable"
+                class="transaction-table"
+            ></div>
+
+        </section>
+
+
+
+        <!-- =================================================
+             FINANCIAL PLAN
+        ================================================== -->
+
+        <section
+            id="planView"
+            class="page-view hidden"
+        >
+
+            <div class="section-heading">
+
+                <div>
+
+                    <p class="eyebrow">
+                        FINANCIAL PLAN
+                    </p>
+
+                    <h2>
+                        Your financial safety picture
+                    </h2>
+
+                </div>
+
+            </div>
+
+
+            <div
+                id="planMetrics"
+                class="plan-metrics"
+            ></div>
+
+
+            <div
+                id="planGuidance"
+                class="why-card"
+            ></div>
+
+        </section>
+
+    </main>
+
+</div>
+
+
+
+<!-- =========================================================
+     JAVASCRIPT
+========================================================= -->
+
+<script src="script.js"></script>
+
+</body>
+</html>
