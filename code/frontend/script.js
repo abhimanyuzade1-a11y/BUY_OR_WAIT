@@ -1,7 +1,6 @@
-const API_URL = "http://127.0.0.1:5000/api/analyze";
+const API_URL = "https://buyorwait-api.onrender.com/api/analyze";
 
-const PROFILE_API_URL = "http://127.0.0.1:5000/api/profile";
-
+const PROFILE_API_URL = "https://buyorwait-api.onrender.com/api/profile";
 const formatMoney = (value, currency) =>
     new Intl.NumberFormat("en-IN", {
         maximumFractionDigits: 2
